@@ -1,0 +1,150 @@
+<!--Contact Us-->
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="Style\style1.css" type="text/css">
+
+</head>
+
+<body>
+    <header>
+
+        <div class="topnav" id="myTopnav">
+                <a href="index.html" style="padding:0px;">
+                    <img src="Images\Bespoke logo final - white on green.jpg" alt="Home" style="width:120px;height:40px;">
+                </a>        
+            <div class="topnav-right">
+                <a  href="index.html">
+                    <img src="Images/home-icon-white_338303.png" alt="Home" style="width:20px;height:20px;">
+                </a>
+                <a href="AboutUs.html"><b>AboutUs</b></a>
+                <div class="dropdown">
+                    <button class="dropbtn"><b>Courses</b>
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="Courses.html">All Courses</a>
+                        <a href="comingsoon.html">Emergency First Response</a>
+                        <a href="First Aid Courses.html">First Aid</a>
+                        <a href="comingsoon.html">Manuel Handling</a>
+                    </div>
+                </div>
+            <!--<a href="Courses.html">Courses</a>-->
+            <a href="schedule.html"><b>Scheduled Dates</b></a>
+            <a href="Feedback.html"><b>Feedback</b></a>
+            <a href="Contact-us.html"><b>Contact Us</b></a> 
+            <!--<input type type="text" placeholder="Search..">-->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="contact-container">
+            <div style="text-align:center; padding-top: 50px;">
+              <h2>Contact Us</h2>
+              <p>Quem antiopam vix in, ea etiam putent bonorum vim. Eum et pericula iudicabit, ex mea omnium liberavisse. Ut omittam splendide eam, doctus delenit quo no. Vero principes quo ei, dicant malorum pro id, sit no nibh choro bonorum:</p>
+            </div>
+            <div class="contact-row">
+              <div class="contact-column">
+                <img src="Images\contact-us.jpg" alt="contact us" style="width:100%">
+              </div>
+              <div class="contact-column">
+                <form action="callbackform.cgi" method="post">
+                  <label for="fname">Full Name</label>
+                  <input type="text" id="fname" name="fname" placeholder="Your full name..">
+                  <label for="tel">Telephone</label>
+                  <input type="tel" id="tel" name="tel" placeholder="Your telephone number..">
+                  <label for="county">County</label>
+                  <select id="county" name="county">
+                    <option value="bedfordshire">Bedfordshire</option>
+                    <option value="bershire">Bershire</option>
+                    <option value="bristol">Bristol</option>
+                    <option value="Cambridgeshire">Cambridgeshire</option>
+                    <option value="Cheshire">Cheshire</option>
+                    <option value="Cornwall">Cornwall</option>
+                    <option value="bedfordshire">County Durham</option>
+                    <option value="Derbyshire">Derbyshire</option>
+                    <option value="Devon">Devon</option>
+                  </select>
+                  <p style="font-size:20px;">Avaliable to talk:</p>  
+                  <label class="check-container">Morning
+                        <input type="checkbox" checked="checked" name="morning">
+                        <span class="checkmark"></span>
+                  </label>
+                  <label class="check-container">Midday
+                        <input type="checkbox" name="midday">
+                        <span class="checkmark"></span>
+                  </label>
+                  <label class="check-container">Evening
+                        <input type="checkbox" name=evening>
+                        <span class="checkmark"></span>
+                  </label>
+                  <label class="check-container">Anytime
+                        <input type="checkbox" name="anytime">
+                        <span class="checkmark"></span>
+                  </label>
+                  </br>
+                  </br>
+                  <label for="subject">Enquiry</label>
+                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                  <input type="reset" value="Reset Form">                  
+                  <input type="submit" value="Submit">
+                   
+                </form>
+              </div>
+            </div>
+          </div>
+
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <footer class="footer">
+        <div class="left-footer">
+            <a href="index.html" target="_self">HOME</a>
+            <a href="AboutUs.html" target="_self">AboutUs</a>
+            <a href="Courses.html" target="_self">COURSES</a>           
+            <a href="accessibility.html" target="_self">ACCESSIBILITY</a>
+            <a href="Contact-us.html" target="_self">CONTACT US</a>
+            <p style="padding-top: 15px; padding-bottom: 15px; font-size: 20px; font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; color: white; text-align: right;">BESPOKE TRAINING | BRISTOL</p>
+        </div>
+    
+    </footer>
+
+<!--Javascript-->
+    <script>
+
+        // When the user scrolls down from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myBtn").style.display = "block";
+            } else {
+         document.getElementById("myBtn").style.display = "none";
+            }
+        }
+        
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+             x.className += " responsive";
+            } else {
+            x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+
+</html>
+

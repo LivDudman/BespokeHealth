@@ -1,0 +1,904 @@
+body {
+  margin: 0;
+  font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+  color: white;
+  background: #00505b;   
+}
+.main {
+      margin-top: 30px;
+
+  }
+
+
+/*============= Grids ========================================*/
+/*creating two uneven columns*/
+/*Base Template*/
+.left-column-main { 
+  float: left;
+  width: 80%;
+  background-color: white;
+  color: #004751;
+  padding-left: 10px;
+  font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+}
+.left-column-course { 
+  float: left;
+  background-color: white;
+  color: #004751;
+  padding-left: 10px;
+  padding-right: 50%;
+  font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+}
+
+.right-side {
+  float: right;
+  width: 20%;
+  padding-left: 0;
+  padding-bottom: 10px;
+  color: white;
+  font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+}
+/*Three image container*/
+/*Course*/
+.column {
+  width: 33.3%;
+  padding: 5px;
+  align-content: center;
+}
+.row {
+  padding-left: 20%;
+  align-content: center;
+  display: flex;
+}
+/*Review*/
+.review-row {
+  align-content: center;
+  display: flex;  
+}
+
+.review-col {
+  width: 33.3%;
+  padding: 5px;
+  align-content: center;  
+}
+.feedback-column {
+  width: 50%;
+  padding: 5px;
+  align-content: center;
+  display: block;
+}
+.feedback-row {
+  padding-left: 10px;
+  align-content: center;
+  display: flex;
+}
+
+.calendar-row {
+  padding-left: 10px;
+  align-content: center;
+  display: flex;
+
+}
+
+.calender-column {
+  width: 100%;
+  padding-left: 10px;
+  display: flex;
+  align-content: center;
+
+}
+/*Course Pge to fit calendar*/
+/*-------------------------------------------*/
+/*============= RESPONSIVE ========================================*/
+
+/*when the screen is less tan 600 pixels wide, hide all links, execpt first one*/
+  @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child), .dropdown .dropbtn {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+
+ @media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    text-align: center;
+  }
+
+  .container img {
+    margin: auto;
+    float: none;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .left-column-main, .right-side, .left-footer, .footer { 
+    width: 100%;
+    padding: 0;
+    display: block;
+    text-align: left;
+  }
+}
+
+/* Add media queries for responsiveness. This will center both the text and the image inside the reviews */
+@media (max-width: 600px) {
+  .reviews {
+    text-align: center;
+  }
+
+  .reviews img {
+    margin: auto;
+    float: none;
+    display: block;
+  }
+}
+
+/* Makes 3 columns stack on top */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .contact-column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+/*-------------------------------------------*/
+
+/*--------------------------------------------*/
+/* FAILED ATTEMPTS 
+---------------------------------------------
+.allcourse-grid {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(4,7%);
+  grid-template-areas: 
+  "banner banner banner banner"
+  ""
+}
+---------------------------------------------
+/* TRIED TO ADD AN EXTRA HEADING ABOVE NAVBAR
+.secondaryheader {
+  border-bottom: 1px solid transparent;
+}
+
+.secondaryheader .secondaryheaderrow {
+  float: left;
+  margin-right: 0;
+  -webkit-flex-grow: 1;
+}
+-------------------------------------------------
+DISGUARDED
+.footer a{
+  left: 0;
+  bottom: 0;
+  background-color: #004751;
+  text-align: left;
+  font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+  align-self: baseline;
+  display: block;
+}
+
+.footer:hover, .footer:active {
+    background-color: #004751;
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+}
+.footer:visited .footer:link {
+  background-color: #004751;
+  font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+}
+
+-------------------------------------------------
+*/
+/*--------------------------------------------*/
+
+
+/*============ Banner Design========================*/
+.banner {
+  display: block;
+  color: white;
+  background-color: #157F6E;
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 10px;
+  text-align: right;
+  border-top: 15px;
+  padding-right: 15px;
+}
+/*-------------------------------------------*/
+
+
+
+/*============   right panel design   ========================*/
+.enquire {
+  background-color: #004751;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-bottom: 50px;
+  padding-right: 2px;
+}
+.need-help-side {
+  background-color: #01515C;
+  padding-top: 5px;
+  padding-bottom: 25px;
+  padding-right: 2px;
+  text-align: center;
+  float: center;
+}
+
+.review-side {
+  text-align: center;
+  background-color: #004751;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  padding-left: 10px;
+}
+/*--------------------------------------*/
+
+
+/*============  left panel design   ========================*/
+.left-bottom {
+  text-align: left;
+  background-color: white;
+  padding-top: 50px;
+  padding-bottom: 0;
+  padding-left: 10px;
+  padding-right: 50px;
+}
+
+/*-------------------------------------------*/
+
+/*============  NAVBAR   ========================*/
+/* Add background color to nav bar */
+.topnav {
+    /*overflow: hidden; */
+    background-color: #00505b;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+/* Style of links in nav bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+    float: right;
+  }
+/* Change colour of links when mouse is hovering */
+.topnav a:hover {
+    background-color: white;
+    color: #004751;
+}
+/* Style the "active" element to highlight the current page */
+.topnav a.active {
+    background-color: #00505b;
+    color: white;
+}
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+  }
+/*bottom line slides in */
+.topnav a::after {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background: white;
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	-moz-transition: opacity 0.3s, -moz-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	transform: translateY(10px);
+}
+
+.topnav a:hover::after,
+.topnav a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}
+/*----------------------------------------------------*/
+/*--Dropdown Menu--*/
+/* Dropdown container */
+.dropdown {
+    float: left;
+
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+/*Add white background colour to navbar on hover */
+.dropdown:hover .dropbtn {
+    background-color: white;
+    color: #00505b;
+}
+
+/* Dropdown content hidden by default */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    color: #00505b;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rbga(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a{
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+}
+
+/* show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*-------------------------------------------*/
+
+/*============  FOOTER  ========================*/
+.left-footer {
+  bottom: 0;
+  align-self: baseline;
+  display: block;  
+}
+.left-footer a{
+  float: left;
+  display: block;
+  color: white;
+  background-color: #00505b;
+  text-align: left;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  align-self: baseline;
+  bottom: 0;
+}
+.left-footer a:hover {
+  background-color: white;
+  color: #004751;
+}
+/*----------------------------------------*/
+
+/*============  HOMEPAGE   ========================*/
+
+
+/*--Find course section--*/
+.findcourse {
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+/*--Need help section--*/
+.help  {
+  background-color: #004751;
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  padding-top: 10px;
+  float: center;
+}
+
+.help-h {
+  color: white;
+  text-align: center;
+  font-size: 50px;
+}
+
+.help-p {
+  color:#75ffe6;
+  font-size: 14px;
+  padding-bottom:30px;
+  text-align: center;  
+}
+
+.callback-butt {
+  color:#00505b; font-size: 20px; 
+  background-color:#75ffe6; 
+  padding:10px 20px; 
+  text-align:center; 
+  margin: 4px 2px; 
+  border-radius:16px;
+}
+
+/*--Callback Section--*/
+/*Call back button*/
+.callBack {
+  background-color: #75ffe8;
+  border: none;
+  color: #00505b;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+}
+
+.text-container {
+  position: relative;
+  font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+}
+
+.text-box {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: transparent;
+  color: #00505b;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/*--Review Section--*/
+.review {
+  background-color: white;
+  padding-top: 10px;
+  padding-bottom: 50px; 
+}
+/* Style the container with a rounded border, grey background and some padding and margin */
+.reviews {
+  border: 2px solid #ccc;
+  background-color: #00505b;
+  border-radius: 5px;
+  padding: 16px;
+  margin: 16px 0;
+  font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+}
+
+/* Clear floats after reviewss */
+.reviews::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Float images inside the reviews to the left. Add a right margin, and style the image as a circle */
+.reviews img {
+  float: left;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+/* Increase the font-size of a span element */
+.reviews span {
+
+  font-size: 20px;
+  margin-right: 15px;
+}
+/*-------------------------------------------*/
+
+
+
+
+
+/*============  TOP OF PAGE BUTTON   ========================*/
+/* Top of page button */
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 70px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #75ffe8;
+    color: #004751;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;    
+}
+
+#myBtn:hover {
+    background-color: white;
+    color: #00505b;
+  }
+/*----------------------------------------*/
+
+
+/*============  CONTACT US PAGE   ========================*/
+/*Contact us page*/
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=date], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+input[type=tel], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #00505b;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius:16px;
+}
+
+input[type=submit]:hover {
+  background-color: #75ffe8;
+  color: #004751;
+}
+input[type=reset] {
+  background-color: #00505b;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius:16px;
+}
+
+/* Style the container/contact section */
+.contact-container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+  color: #004751;
+}
+
+/* two columns that float next to eachother */
+.contact-column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.contact-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/*Checkbox container*/
+.check-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+
+}
+.check-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #75ffe8;
+}
+
+.check-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.check-container input:checked ~ .checkmark {
+  background-color: #004751;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.check-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.check-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+ul {list-style-type: none;}
+
+/*========COURSE PAGES=============*/
+.Course-Details {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*============  FEEDBACK PAGE   ========================*/
+
+/*============ COMING SOON ========================*/
+
+/* Background image */
+.bg {
+    background-color: #004751;
+    height: 100%;
+    color: white;
+    position: relative;
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+    font-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+.middle {
+  position: absolute;
+  padding-top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/*============  CALENDAR   ========================*/
+.container{
+  width:400px;
+  height:200px;
+  position:relative;
+  perspective: 1000px;
+  left: 0;
+  top: 50%;
+}
+.card{
+  width:100%;
+  height:100%;
+  position:absolute;
+  transform-style:preserve-3d;
+  transition:transform 1s ease;
+  cursor:pointer;
+}
+.back, .front{
+  border-radius:6px;
+  position:absolute;
+  width:100%;
+  height:100%;
+  backface-visibility:hidden;
+}
+.contentfront{
+  width:100%;
+  height:100%;
+  float:left;
+  transform:translatez(60px);
+  backface-visibility: hidden;
+  transform-style:preserve-3d;
+  
+}
+.contentback{
+  width:100%;
+  height:100%;
+  float:left;
+  transform:translatez(-60px);
+  backface-visibility: hidden;
+  transform-style:preserve-3d;
+  
+}
+.back{
+  transform:rotateY(180deg);
+  background-color:#232227;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.front{
+  text-transform:uppercase;
+  background-color:#232227;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.date{
+  height:100%;
+  width:130px;
+  float:left;
+  background-color:#004751;
+  border-radius:0 6px 6px 0;
+  text-align:right;
+  padding:10px 30px;
+  box-sizing:border-box;
+  transform-style:preserve-3d;
+}
+.datecont{
+  height:100%;
+  transform:translatez(60px) scale(.9);
+}
+#date{
+  font-size:50px;
+  color:#ECECE7;
+  font-family: 'Montserrat', sans-serif;
+  font-weight:500;
+  float:right;
+}
+#day{
+  float:right;
+  font-size:14px;
+  color:#232227;
+  font-family: 'Montserrat', sans-serif;
+  font-weight:400;
+}
+#month{
+  float:right;
+  font-size:10px;
+  color:#232227;
+  font-family: 'Montserrat', sans-serif;
+  font-weight:200;
+}
+.date i{
+  color:#ECECE7;
+  position:absolute;
+  bottom:10px;
+  right:0;
+}
+.date i:hover{
+  color:#232227;
+  transition:.3s ease;
+}
+.month{
+  height:100%;
+  width:270px;
+  float:left;
+  padding:20px 30px;
+  box-sizing:border-box;
+}
+.month table{
+  width:100%;
+}
+.orangeTr{
+  color: red;
+  font-weight: 700;
+}
+.whiteTr{
+  color:white;
+  
+}
+.whiteTr th:hover{
+  color: red;
+  transition:.3s ease;
+}
+.month tr{
+  height:24px;
+}
+.month th{
+  width:14%;
+  font-size:10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight:400;
+}
+
+.flipped{
+  transform:rotateY(-180deg);
+  height:400px;
+  width:200px;
+  left:calc(50% - 100px);
+  top:calc(50vh - 200px);
+}
+.backcontainer{
+    backface-visibility: hidden;
+  transform-style:preserve-3d;
+  width:calc(100% - 60px);
+  height:calc(100% - 40px);
+  float:left;
+  margin-left:30px;
+  margin-top:20px;
+  border-left:solid red 5px;
+  background-color:red;
+  transform:translatez(-60px) scale();
+}

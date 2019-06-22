@@ -1,0 +1,117 @@
+<!--About Us-->
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Us</title>
+    <link rel="stylesheet" href="Style\style1.css" type="text/css">
+
+</head>
+
+<body>
+    <header>
+        <div class="topnav" id="myTopnav">
+                <a href="index.html" style="padding:0px;">
+                    <img src="Images\Bespoke logo final - white on green.jpg" alt="Home" style="width:120px;height:40px;">
+                </a>
+            <div class="topnav-right">
+                <a  href="index.html">
+                    <img src="Images/home-icon-white_338303.png" alt="Home" style="width:20px;height:20px;">
+                </a>
+                <a href="AboutUs.html"><b>About Us</b></a>
+                <div class="dropdown">
+                    <button class="dropbtn"><b>Courses</b>
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                            <a href="Courses.html">All Courses</a>
+                        <a href="comingsoon.html">Emergency First Response</a>
+                        <a href="first-aid-course.html">First Aid</a>
+                        <a href="comingsoon.html">Manuel Handling</a>
+                    </div>
+                </div>
+            <!--<a href="Courses.html">Courses</a>-->
+            <a href="schedule.html"><b>Scheduled Dates</b></a>
+            <a href="Feedback.html"><b>Feedback</b></a>
+            <a href="Contact-us.html"><b>Contact Us</b></a> 
+            <!--<input type type="text" placeholder="Search..">-->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="bg">
+            <div class="middle">
+            <h1>COMING SOON</h1>
+            <hr>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="left-footer">
+            <a href="index.html" target="_self">HOME</a>
+            <a href="AboutUs.html" target="_self">ABOUT US</a>
+            <a href="Courses.html" target="_self">COURSES</a>           
+            <a href="accessibility.html" target="_self">ACCESSIBILITY</a>
+            <a href="Contact-us.html" target="_self">CONTACT US</a>
+            <p style="padding-top: 15px; padding-bottom: 15px; font-size: 20px; font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; color: white; text-align: right;">BESPOKE TRAINING | BRISTOL</p>
+        </div>
+        <!--<div class="right-footer">
+            <p style="font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; color: white;">BESPOKE TRAINING | BRISTOL</p>
+        </div>-->
+    </footer>
+
+<!--Javascript-->
+    <script>
+        //Slideshow changing every 5 seconds
+        var myIndex = 0;
+        carousel();
+        
+        function carousel() {
+            var i;
+            var x =
+            document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}
+             x[myIndex-1].style.display = "block";
+             setTimeout(carousel, 3000);
+            }
+        
+        // When the user scrolls down from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myBtn").style.display = "block";
+            } else {
+         document.getElementById("myBtn").style.display = "none";
+            }
+        }
+        
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+             x.className += " responsive";
+            } else {
+            x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+
+</html>
+
